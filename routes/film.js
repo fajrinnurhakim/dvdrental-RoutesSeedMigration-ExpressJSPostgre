@@ -11,7 +11,7 @@ router.get("/", (req, res) => {
         res.send(result);
     });
 });
-
+// Route untuk menampilkan data list film berdassarkan id
 router.get("/:id", (req, res) => {
     const film_id = req.params.id;
     pool.query(
