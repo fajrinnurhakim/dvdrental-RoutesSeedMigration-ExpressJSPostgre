@@ -35,7 +35,7 @@ router.get("/category/:category", (req, res) => {
     const categoryName = req.params.category;
     pool.query(
         `
-        SELECT film.*
+        SELECT *
         FROM film
         JOIN film_category ON film.film_id = film_category.film_id
         JOIN category ON film_category.category_id = category.category_id
